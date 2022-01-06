@@ -1,0 +1,17 @@
+{% extends 'template.html' %}
+{% block content %}
+<form method="post">
+  <div class="mb-3">
+    <label for="video-name" class="form-label">Link del video</label>
+    <input type="text" class="form-control" name="video-name" id="video-name" placeholder="Ingrese el link del video">
+  </div>
+  <div class="mb-3">
+    <label for="choices" class="form-label">Link del video</label>
+    <select class="form-select" name="choices" id="choices" aria-label="Default select example">
+      <option value="Video">Video</option>
+      <option value="Audio">Audio</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-danger">Convertir</button>
+</form>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy YT Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename = 'img/lightning.png') }}" type="image/png" sizes="16x16">
+</head>
+
+<body>
+  <div class="container-personalized">
+    <div class="title">
+      <h1>Youtube Video</h1>
+      <h2>Converter</h2>
+    </div>
+    <div class="legend">
+      <p>
+        Con Easy YT Converter es una plataforma en donde puedes descargar tus videos favoritos de youtube como 
+        mp4 o el aduio de un video en mp3 en la calidad que desees y de manera gratuita, Solo debes pegar la 
+        direcci&oacute;n del video y seleccionar el formato al que deseas convertir !!!
+      </p>
+    </div>
+    <main role="main" class="dinamic-content">
+      {% block content %} {% endblock %}
+    </main>
+    <div style="
+      grid-column: 1/3;
+      display: grid;
+      margin: 20px;
+      justify-items: center;
+      "
+    >
+      <div class="card" style="width: 18rem; grid-column: 1;display: flex;justify-content: space-between;">
+        <img src="{{ url_for('static', filename = 'img/lightning.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">
+            Descarga r&aacute;pidamente el contenido que quieras de youtube, en el formato que quieras.
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; grid-column: 2;;display: flex;justify-content: space-between;">
+        <img src="{{ url_for('static', filename = 'img/infinite.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">No hay restricciones de descargas, te permite disfutar m&aacute;s de este recurso.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; grid-column: 3;;display: flex;justify-content: space-between;">
+        <img src="{{ url_for('static', filename = 'img/open-source.png') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Disfruta de este servicio sin membresia o licncias, nuestros servicios son gratuitos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
